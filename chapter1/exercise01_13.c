@@ -9,7 +9,7 @@ main()
   int curr_char;
   int curr_word_length;
   int word_length[MAX_CHARS_PER_WORD];
-  int i;
+  int i, j;
   
   curr_word_length = 0;
   for (i = 0; i <= MAX_CHARS_PER_WORD; i++)
@@ -35,6 +35,11 @@ main()
   
   for (i = 1; i <= MAX_CHARS_PER_WORD; i++)
   {
-    printf ("word length %d: %d\n", i, word_length[i]);
+    printf ("word length %2d=%2d: ", i, word_length[i]);
+    for (j = 1; j <= word_length[i]; j++)
+    {
+      printf("|");
+    }
+    printf("\n");
   }
 }
