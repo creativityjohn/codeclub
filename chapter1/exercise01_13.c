@@ -35,7 +35,7 @@ main()
   
   for (i = 1; i <= MAX_CHARS_PER_WORD; i++)
   {
-    printf ("word length %2d=%2d: ", i, word_length[i]);
+    printf ("word length %2d =%2d: ", i, word_length[i]);
     for (j = 1; j <= word_length[i]; j++)
     {
       printf("|");
