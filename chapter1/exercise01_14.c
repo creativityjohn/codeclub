@@ -23,6 +23,11 @@ main()
   
   for (i = 0; i <= MAX_ASCII_CHAR_TO_TRACK; i++)
   {
-    printf ("%c\t%2d\n", i, asciiIndex[i]);
+    printf ("%c\t%2d\t", i, asciiIndex[i]);
+    for (j = 0; j < asciiIndex[i]; j++)
+    {
+      printf("|");
+    }
+    printf("\n");
   }
 }

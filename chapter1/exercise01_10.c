@@ -11,7 +11,7 @@ main()
     {
       printf("\\t");
     }
-    else if ((c == 8) || (c == 127))   // backspace or delete, doesn't work
+    else if ((c == 8) || (c == 127))   // backspace or delete, use ctrl-h to enter this character
     {
       printf("\\b");
     }
