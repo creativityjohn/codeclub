@@ -1,19 +1,19 @@
 #include <stdio.h>
-#define MAXLINE 1000    // max input line size
+#define MAXLINETOPRINT 1000   // max input line size
 
-int getaline(char line[], int maxline);
+long getaline(char line[], long maxline);
 void copy(char to[], char from[]);
 
 // print longest input line
 main()
 {
-    int len;                    // current line length
-    int max;                    // max length seen so far
-    char line[MAXLINE];         // current input line
-    char longest[MAXLINE];      // longest line saved here
+    long len;                   // current line length
+    long max;                   // max length seen so far
+    char line[MAXLINETOPRINT];         // current input line
+    char longest[MAXLINETOPRINT];      // longest line saved here
     
     max = 0;
-    while ((len = getaline(line, MAXLINE)) > 0)
+    while ((len = getaline(line, MAXLINETOPRINT)) > 0)
     {
         if (len > max)
         {
@@ -23,17 +23,19 @@ main()
     }
     if (max > 0)                // there was a line
     {
+        printf("\n");
+        printf("max line length including newline = %ld, printing up to the first %ld characters\n", max, (long) (MAXLINETOPRINT - 1));   // maxline includes null
         printf("%s\n", longest);
     }
     return 0;
 }
 
 // getaline, read a line into s, return length
-int getaline(char s[], int lim)
+long getaline(char s[], long lim)
 {
-    int c, i;
+    long c, i;
     
-    for (i = 0; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; ++i)
+    for (i = 0; (c = getchar()) != EOF && c != '\n'; ++i)
     {
         if (i < lim - 1)
         {
@@ -52,7 +54,7 @@ int getaline(char s[], int lim)
 // copy: copy 'from' into 'to'; assume to is big enough
 void copy(char to[], char from[])
 {
-    int i;
+    long i;
     
     i = 0;
     while ((to[i] = from[i]) != '\0')
