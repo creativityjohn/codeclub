@@ -12,7 +12,7 @@ main()
     int i;                                                      // for loop index
     int len;                                                    // current line length
     char line[MAX_LINE_TO_BUFFER];                              // current input line
-    char storedLines[NUM_LINES_TO_STORE][MAX_LINE_TO_BUFFER];   // stored lines (longer than min length that will be printed)
+    char storedLines[NUM_LINES_TO_STORE][MAX_LINE_TO_BUFFER];   // stored lines (longer than min length that will be printed), waste of space though
     int index;                                                  // index of stored line
     
     index = 0;
