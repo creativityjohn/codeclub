@@ -81,6 +81,7 @@ node* ll_delete(int val, node *pNode)
         }
         else
         {
+            pPreviousIterator = pIterator;
             pIterator = pIterator->pNextNode;
         }
     }
