@@ -96,12 +96,6 @@ void main()
 
     pLinkedList = NULL;
     printf ("Integer Linked List\na x to add x, d x to delete x, p to print\n");
-    /*
-    pLinkedList = ll_add(1, pLinkedList);
-    ll_print(pLinkedList);
-    pLinkedList = ll_add(2, pLinkedList);
-    ll_print(pLinkedList);
-    */
     while (1)
     {
         printf("waiting for input\n");
