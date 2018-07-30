@@ -65,7 +65,9 @@ node* ll_delete(int val, node *pNode)
     // if item to delete is the head, must point to the next one
     if (pIterator->val == val)
     {
-        return pIterator->pNextNode;
+        pHead = pIterator->pNextNode;
+        free(pIterator);
+        return pHead;
     }
 
     // previous iterator must point to the next one if current one is deleted
